@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Cariadade é Essencial</title> 
+ <link rel="preconnect" href="https://fonts.gstatic.com"> 
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display 
+=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="./styles/contato.css"> 
+<link rel="stylesheet" href="./styles/global.css"> 
+<!--Chamada do JQUERY-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ <script src="jquery/additional-methods.js"></script> 
+ <script src="jquery/jquery.validate.min.js"></script> 
+ <script src="jquery/messages_pt_BR.js"></script> 
+<!--Função de validação do formulario com JQUERY-->
+ <script type="text/javascript"> 
+ $(document).ready(function(){ 
+ $('.form').validate({ 
+ rules:{ 
+nome:{ 
+required: true, 
+minWords: 2, 
+ minlength: 5
+ }, 
+telefone:{ 
+required:true, 
+digits:true, 
+maxlength:11, 
+minlength:11
+ }, 
+email:{ 
+ required: true, 
+email: true
+ } 
+ }, 
+ messages:{ 
+nome:{ 
+ required:"Informe seu nome completo", 
+minWords:"Forneça nome e sobrenome", minlength:"No minimo 5 letras"
+ }, 
+email:{ 
+ required:"O email é obrigatorio", 
+email: "Informe um email válido"
+ } 
+ }, 
+ }); 
+ }); 
+ </script> 
+</head> 
+    <body> 
+        <header class="header"> 
+            <img src="./imagens/50268.png" alt=""> 
+            <nav> 
+                 <ul> 
+                    <li><a href="index.html">Pagina Inicial</a></li> 
+                    <li><a href="sobre.html">Sobre</a></li> 
+                    <li><a href="loguin.html">Entre em contato</a></li> 
+                    <li><a href="doacao.html" class="doacao">Doação</a></li> 
+                </ul> 
+            </nav> 
+        </header> 
+        <main class="main"> 
+        <h2 id="validaform" class="main-title">Crie sua Conta:</h2> 
+        <form class="form" action="confirm.html" method="POST"> 
+        <div class="field-block"> 
+            <label for="nome">Nome:</label> 
+            <input type="text" id="nome" name="nome" placeholder="Coloque o nome completo" required> 
+        </div>
+        <div class="field-block"> 
+            <label for="assunto">CPF:</label> 
+            <input type="number" min="11" maxlength="11" id="assunto" name="assunto">  
+        <div class="field-block"> 
+            <label for="telefone">Telefone:</label> 
+            <input type="number" id="telefone" name="telefone" placeholder="(11)123456789" maxlength="11" > 
+        </div> 
+        <div class="field-block"> 
+            <label for="assunto">Endereço:</label> 
+            <input type="text" id="assunto" name="assunto"> 
+        </div> 
+         </div>
+         <div class="field-block"> 
+            <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com.br"> 
+        </div> 
+        <div class="field-block"> 
+            <label for="assunto">Senha:</label> 
+            <input type="text" min="6" max="12" id="assunto" name="assunto"> 
+        </div> 
+            <button type="submit">Enviar</button>
+        </form> 
+        </main> 
+ <footer class="footer"> 
+ <ul> 
+ <li><a href="">Facebok </a></li> 
+ <li><a href="">Twitter</a></li> 
+ <li><a href="">Instragram</a></li> 
+ </ul> 
+ </footer> 
+</body> 
+</html>
